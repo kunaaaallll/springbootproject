@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>user Registration  </title>
+<style type="text/css">
+label {
+display:inline-block;
+margin:10px;
+ width:100px;
+ text-align:left;
+}
+button {
+     margin : 5px;
+     padding : 5px;
+     }
+#image {
+  padding: 25px;
+  background: url(https://madhujamk.files.wordpress.com/2014/09/slide1.png);
+  background-repeat: no-repeat;
+  background-size: auto;</style>
+</head>
+<body id="image">
+
+<div align="center">
+<h1> Registration  </h1>
+<form action="#" th:action="@{/Enter}" th:object=${user} method="post">
+<label>Full Name:</label>
+<input type="text" th:field=*{name}/><br/>
+<label>Profession:</label>
+ <select th:field="*{profession}" >
+ <option th:each="p:${professionList}" th:value="${p}" th:text="${p}" />
+ </select>
+<br/>
+
+<button type="submit">SUBMIT</button>
+
+</form>
+</div>
+</body>
+</html>

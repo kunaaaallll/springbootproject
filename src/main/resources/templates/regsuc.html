@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="https://thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Registration Done </title>
+<style type="text/css">
+span {
+        display:inline-block;
+        width: 200px;
+        text-align: left;
+     }
+     #imagesec {
+  padding: 25px;
+  background: url(https://thumbs.dreamstime.com/b/d-render-text-thank-you-background-wallpaper-presentation-power-point-153037859.jpg);
+ background-repeat: no-repeat;
+   background-size: auto;
+</style>
+</head>
+<body id="imagesec">
+<div align="center">
+<h1> Registration Done </h1>
+<span>Full name:</span>
+<span th:text="${user.name}"></span>
+<br/>
+<span>Profession:</span>
+<span th:text="${user.profession}"></span>
+</div>
+</body>
+</html>
